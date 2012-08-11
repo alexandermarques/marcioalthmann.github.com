@@ -1,0 +1,14 @@
+---
+layout:  page
+fnav:    Head back <strong>Home</strong>
+furl:    /
+---
+{% for post in site.posts %}
+<section class="clickable">
+	<article class="post-summary">
+		<p class="date front-page">{{ post.date | date_to_string }}</p>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<p>{{ post.synopsis }}</p>
+	</article>
+</section>
+{% endfor %}

@@ -50,6 +50,26 @@ a small {
   margin:0 auto;
 }
 
+nav.post-nav {
+  margin-bottom: 1em;
+}
+
+nav.post-nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+nav.post-nav div.prev-post {
+  float: left;
+}
+
+nav.post-nav div.next-post {
+  float: right;
+}
+
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
@@ -93,6 +113,11 @@ th {
 
 img {
   max-width:100%;
+}
+
+ul.nomargin li p,
+ul.nomargin ul {
+  margin: 0;
 }
 
 header {
@@ -183,6 +208,19 @@ footer {
   bottom:50px;
 }
 
+section.clickable {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 0;
+  margin: 0 0 10px;
+}
+
+section.clickable article p,
+section.clickable article h2 {
+  margin: 0 0 5px 0;
+}
+
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
@@ -206,7 +244,7 @@ footer {
     padding:20px 0;
     margin:0 0 20px;
   }
-  
+
   header a small {
     display:inline;
   }
